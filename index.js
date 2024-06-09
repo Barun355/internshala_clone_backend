@@ -14,8 +14,8 @@ app.use(express.json())
 app.get("/", (req, res) => {
     res.send("Hello This is My backend")
 })
-app.use("/api", router)
 connect();
+app.use("/api", router)
 app.use((req, res, next) => {
     req.header("Access-Control-Allow-Origin", "*")
     res.header("Access-Control-Allow-Origin", "*")
